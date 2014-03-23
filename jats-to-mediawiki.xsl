@@ -24,7 +24,7 @@
     <xsl:variable name="tableBorder">1</xsl:variable>
 
 
-    <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="no" indent="yes"/>
+    <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
     <xsl:strip-space elements="*"/>
     
     
@@ -36,11 +36,11 @@
     <xsl:template match="/article">
         
         <!-- Start MediaWiki document -->
-        <xsl:element  name="mediawiki">
+        <!--<xsl:element  name="mediawiki">
             <xsl:attribute name="xmlns">http://www.mediawiki.org/xml/export-0.8/</xsl:attribute>
             <xsl:attribute name="xsi:schemaLocation">http://www.mediawiki.org/xml/export-0.8/ http://www.mediawiki.org/xml/export-0.8.xsd</xsl:attribute>
             <xsl:attribute name="version">0.8</xsl:attribute>
-            <xsl:attribute name="xml:lang"><xsl:value-of select="/article/@xml:lang"/></xsl:attribute>
+            <xsl:attribute name="xml:lang"><xsl:value-of select="/article/@xml:lang"/></xsl:attribute>-->
 
             <!-- skip siteinfo element; contains information about the wiki this xml was exported FROM, so does not pertain to our scenario. -->
                 
@@ -97,7 +97,7 @@
 
             </xsl:element>
 
-        </xsl:element>        
+        <!-- </xsl:element>  -->      
     </xsl:template>
 
     <xsl:template match="front">
